@@ -1,6 +1,6 @@
 from js import document
 
-def compute_area(event=None):
+def compute_area():
     try:
         b1 = float(document.getElementById("base1").value)
         b2 = float(document.getElementById("base2").value)
