@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>Q1-DS1</title>
 
-  <!-- Use a stable PyScript release -->
   <link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
   <script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
 
-  <!-- Config block -->
   <py-config>
-    packages = []
+      packages = []
   </py-config>
 </head>
 <body style="font-family: Arial; text-align: center; margin-top: 50px;">
@@ -21,14 +19,24 @@
   <label>Base 2: <input id="base2" type="number" step="any"></label><br><br>
   <label>Height: <input id="height" type="number" step="any"></label><br><br>
 
-  <!-- Button binding -->
   <button py-click="compute_area()">Compute Area</button>
 
   <h3>Result:</h3>
   <p id="output">Enter values and click Compute.</p>
 
-  <!-- Load Python code -->
-  <py-script src="main.py"></py-script>
+  <py-script>
+from js import document
+
+def compute_area():
+    try:
+        b1 = float(document.getElementById("base1").value)
+        b2 = float(document.getElementById("base2").value)
+        h = float(document.getElementById("height").value)
+        area = 0.5 * (b1 + b2) * h
+        document.getElementById("output").innerText = f"Area = {area}"
+    except Exception:
+        document.getElementById("output").innerText = "Please enter valid numbers."
+  </py-script>
 
 </body>
 </html>
