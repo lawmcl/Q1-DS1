@@ -7,5 +7,5 @@ def compute_area():
         h = float(document.getElementById("height").value)
         area = 0.5 * (b1 + b2) * h
         document.getElementById("output").innerText = f"Area = {area}"
-    except:
+    except Exception as e:
         document.getElementById("output").innerText = "Please enter valid numbers."
