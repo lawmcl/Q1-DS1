@@ -1,6 +1,6 @@
 from js import document
 
-def compute_area(event=None):   # accept event so PyScript can call it
+def compute_area(event=None):
     try:
         b1 = float(document.getElementById("base1").value)
         b2 = float(document.getElementById("base2").value)
