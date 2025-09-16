@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ICT_DS1</title>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+
+  <h2>Trapezoid Area Calculator</h2>
+
+  <label>Base 1: <input id="base1" type="number" step="any"></label><br><br>
+  <label>Base 2: <input id="base2" type="number" step="any"></label><br><br>
+  <label>Height: <input id="height" type="number" step="any"></label><br><br>
+
+  <button py-click="compute_area()">Compute Area</button>
+
+  <h3>Result:</h3>
+  <p id="output">Enter values and click Compute.</p>
+
+  <!-- Load Python script -->
+  <py-script src="main.py"></py-script>
+
+</body>
+</html>
